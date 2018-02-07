@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter demo</title>
+</head>
+<body>
+    <img src="{{ avatar | default('http://avatar.csdn.net/B/6/3/2_ghjvbng.jpg')}}">
+
+    <hr>
+
+    <p>comments:({{comments | length}})</p>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <a href="#">{{ comment.user }}</a>
+                <a href="#">{{ comment.content }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
