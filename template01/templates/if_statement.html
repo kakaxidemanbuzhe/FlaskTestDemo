@@ -5,6 +5,13 @@
     <title>test title</title>
 </head>
 <body>
-    hello world!
+    {% if user and user.age > 17 %}{# age must larger then 17 #}
+        <a href="#">{{ user.username }}</a>
+        <a href="#">logout</a>
+    {% else %}
+        <a href="#">login</a>
+        <a href="#">register</a>
+    {% endif %}
+
 </body>
 </html>
